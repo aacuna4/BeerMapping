@@ -1,0 +1,19 @@
+<template name="layout_map">
+  <div style="height:100%; width:100%;">
+  		<div id="divabove" style="width:100%">
+  			<select id="location" style="position:absolute;" onChange="setCenter();">
+  				<option value="MyLocation">My location</option>
+  				<option value="NorCal" selected>NorCal</option>
+  				<option value="Bay Area">Bay Area</option>
+  				<option value="SoCal">SoCal</option>
+  				<option value="Oregon">Oregon</option>
+  				<option value="Colorado">Colorado</option>
+  				<option value="Pennsylvania">Pennsylvania</option>
+  			</select>
+  		</div>
+  		<div id="mapContainter">
+  			{{> googleMap name="map" options=exampleMapOptions}}
+  			<p id="love" class="love">Made with <i class="icon ion-heart"></i> by <a href="https://www.linkedin.com/in/tim-ferguson-01451892/">Tim Ferguson</a></p>
+  		</div>
+  	</div>
+</template>
